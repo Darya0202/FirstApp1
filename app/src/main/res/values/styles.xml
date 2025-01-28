@@ -4,4 +4,7 @@
     <style name="CustomNavigationMenuItem" parent="TextAppearance.AppCompat.Body1">
         <item name="android:paddingStart">16dp</item>
     </style>
+    <style name="button">
+        <item name="android:background">@color/orange</item>
+    </style>
 </resources>
