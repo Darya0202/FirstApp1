@@ -1,6 +1,7 @@
 package com.example.firstapp
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -49,6 +50,13 @@ class SignInActivity : AppCompatActivity() {
                         .beginTransaction()
                         .replace(R.id.fragment_container, FragmentMainScreen())
                         .commit()
+
+                    val sharedPref = this.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    val emailText = email.text.toString()
+
+                    editor.putString("saved_email", emailText)
+                    editor.apply()
                 }
             }
         }
