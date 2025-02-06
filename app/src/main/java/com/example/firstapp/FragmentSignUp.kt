@@ -1,8 +1,9 @@
 package com.example.firstapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.example.firstapp.databinding.FragmentSignUpBinding
+
 
 class FragmentSignUp : Fragment() {
     private var _binding: FragmentSignUpBinding? = null
@@ -57,6 +60,13 @@ class FragmentSignUp : Fragment() {
                     .beginTransaction()
                     .replace(R.id.fragment_container, FragmentMainScreen())
                     .commit()
+
+                val sharedPref = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                val editor = sharedPref.edit()
+                val emailText = email.text.toString()
+
+                editor.putString("saved_email", emailText)
+                editor.apply()
             }
         }
         return binding.root
