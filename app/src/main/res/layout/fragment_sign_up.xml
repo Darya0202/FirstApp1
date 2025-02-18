@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-black"
-            android:text="Create account"
+            android:text="@string/create_account"
             android:textAlignment="center"
             android:textColor="#FF5722"
             android:textSize="30sp"
@@ -39,7 +39,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Create an account so you can explore all the existing jobs"
+            android:text="@string/create_an_account_text"
             android:textSize="16sp" />
 
         <EditText
@@ -50,7 +50,7 @@
             android:background="@drawable/credentials"
             android:ems="10"
             android:fontFamily="sans-serif-medium"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="text"
             android:paddingStart="20dp"
             android:textAllCaps="false"
@@ -64,7 +64,7 @@
             android:background="@drawable/credentials"
             android:ems="10"
             android:fontFamily="sans-serif-medium"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="text"
             android:paddingStart="20dp"
             android:textAllCaps="false"
@@ -78,7 +78,7 @@
             android:background="@drawable/credentials"
             android:ems="10"
             android:fontFamily="sans-serif-medium"
-            android:hint="Confirm password"
+            android:hint="@string/confirm_password"
             android:inputType="text"
             android:paddingStart="20dp"
             android:textAllCaps="false"
@@ -86,12 +86,12 @@
 
         <Button
             android:id="@+id/buttonSign"
-            style="@style/button"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/button"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Already have an account"
+            android:text="@string/have_account"
             android:textColor="#BB000000"
             android:textSize="16sp" />
 

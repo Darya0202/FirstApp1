@@ -12,6 +12,7 @@ import com.example.firstapp.databinding.FragmentMainScreenBinding
 import com.example.firstapp.databinding.FragmentProfileBinding
 
 class FragmentMainScreen : Fragment() {
+
     private var _binding: FragmentMainScreenBinding? = null
     private val binding get() = _binding!!
 
@@ -19,7 +20,11 @@ class FragmentMainScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentMainScreenBinding.inflate(inflater, container, false)
+
+        loadFragment(FragmentHome())
+        binding.bottomNav.selectedItemId = R.id.item_home
 
         binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
@@ -38,6 +43,7 @@ class FragmentMainScreen : Fragment() {
                 else -> false
             }
         }
+
         requireActivity().onBackPressedDispatcher.addCallback(
             viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
@@ -45,6 +51,7 @@ class FragmentMainScreen : Fragment() {
                 // Оставляем пустым, чтобы отключить поведение кнопки "Назад"
             }
         })
+
         return binding.root
     }
 
@@ -58,6 +65,7 @@ class FragmentMainScreen : Fragment() {
             .replace(R.id.container, fragment)
             .commit()
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

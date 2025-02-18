@@ -16,8 +16,9 @@
             android:id="@+id/text_profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -28,7 +29,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="email"
+            android:text="@string/email"
             android:textAllCaps="false"
             android:textSize="24sp" />
 
@@ -38,7 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Выйти из профиля" />
+            android:backgroundTint="@color/orange"
+            android:text="@string/logout"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </FrameLayout>
