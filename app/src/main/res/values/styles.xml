@@ -4,4 +4,10 @@
     <style name="CustomNavigationMenuItem" parent="TextAppearance.AppCompat.Body1">
         <item name="android:paddingStart">16dp</item>
     </style>
+    <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>
+
+

@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">FirstApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_here">Login here</string>
+    <string name="welcome_back">Welcome back you\'ve been missed!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create new account</string>
+    <string name="home">Home</string>
+    <string name="news">News</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Log out</string>
+    <string name="create_an_account_text">Create an account so you can explore all the existing jobs</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="have_account">Already have an account</string>
 </resources>
