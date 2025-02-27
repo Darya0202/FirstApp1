@@ -13,20 +13,20 @@ import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.firstapp.databinding.FragmentSignUpBinding
+import com.example.firstapp.databinding.FragmentSignInBinding
 
 
-class FragmentSignUp : Fragment() {
-    private var _binding: FragmentSignUpBinding? = null
+class FragmentSignIn : Fragment() {
+    private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        _binding = FragmentSignInBinding.inflate(inflater, container, false)
 
-        binding.signIn.setOnClickListener {
+        binding.signUp.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, FragmentSignUp())
                 .addToBackStack(null)
@@ -45,9 +45,6 @@ class FragmentSignUp : Fragment() {
             }
             else if(binding.password.text.toString().isEmpty() || binding.password.text.toString().length < 6){
                 Toast.makeText(requireContext(), "Пароль должен содержать более 5 символов", Toast.LENGTH_LONG).show()
-            }
-            else if(binding.password2.text.toString()!=binding.password.text.toString()){
-                Toast.makeText(requireContext(), "Пароли не совпадают", Toast.LENGTH_LONG).show()
             }
             else{
                 parentFragmentManager

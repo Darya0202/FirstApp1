@@ -3,7 +3,6 @@ package com.example.firstapp
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,23 +22,12 @@ class FragmentProfile : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         binding.buttonExit.setOnClickListener {
-            val intent = Intent(requireContext(), SignInActivity::class.java)
+            val intent = Intent(requireContext(), MainActivity::class.java)
             startActivity(intent)
         }
-
-        /*val emailText2: TextView = binding.emailText
-        Log.d("ProfileFragment", "emailText2: $emailText2")
-
-        val sharedPref = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val savedEmail = sharedPref.getString("saved_email", "") // Получаем email
-        Log.d("ProfileFragment", "Saved email: $savedEmail")
-        emailText2.text = savedEmail
-        Log.d("ProfileFragment", "After setting text: ${emailText2.text}")*/
-
-
-
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
